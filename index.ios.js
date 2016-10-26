@@ -19,25 +19,17 @@ import {
 
 import { Container, Content, Grid, Col, List, ListItem, Button, Icon } from 'native-base';
 
+import Main from './app/components/Main';
+
 class AwesomeProject extends Component {
   constructor(props) {
       super(props);
-      this.state = { text: '' };
   }
   
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.navbar}>
-          <Text>Navbar</Text>
-        </View>
-
-        <View style={styles.main}>
-          <TextInput style={{height: 40}} placeholder='Search...' onChangeText={(text) => this.setState({text})} />
-          <Text style={styles.welcome}>
-            {this.state.text}
-          </Text>
-        </View>
+        <Main />
       </View>
     );
   }
