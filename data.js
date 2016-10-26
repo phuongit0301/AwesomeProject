@@ -14,17 +14,11 @@ import {
   AlertIOS,
   Navigator,
   TouchableHighlight,
-  TextInput
 } from 'react-native';
 
 import { Container, Content, Grid, Col, List, ListItem, Button, Icon } from 'native-base';
 
 class AwesomeProject extends Component {
-  constructor(props) {
-      super(props);
-      this.state = { text: '' };
-  }
-  
   render() {
     return (
       <View style={styles.container}>
@@ -33,9 +27,8 @@ class AwesomeProject extends Component {
         </View>
 
         <View style={styles.main}>
-          <TextInput style={{height: 40}} placeholder='Search...' onChangeText={(text) => this.setState({text})} />
           <Text style={styles.welcome}>
-            {this.state.text}
+            Main Content
           </Text>
         </View>
       </View>
@@ -53,11 +46,13 @@ const styles = StyleSheet.create({
   },
   main: {
     backgroundColor: '#F5FCFF',
-    flex: 1
+    flex: 1,
+    alignItems: 'flex-start',
   },
   navbar: {
     backgroundColor: 'red',
-    flex: 1
+    flex: 1,
+    left: 0
   }
 });
 
